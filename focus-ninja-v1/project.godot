@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Focus_ninja_v1"
+config/name="Focus-ninja-v 1"
 config/icon="res://icon.png"
 
 [gui]
