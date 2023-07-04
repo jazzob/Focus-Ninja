@@ -1,6 +1,6 @@
 extends Actor
 
-#creates gravity
+#creates movement
 func _physics_process(delta: float) -> void:
 	#calculates horizontal direction
 	var horizontal_direction = (
@@ -19,4 +19,3 @@ func _physics_process(delta: float) -> void:
 		velocity.y = -jump_strength
 		
 	velocity = move_and_slide(velocity, UP_DIRECTION)
-	
