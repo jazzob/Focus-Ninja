@@ -18,5 +18,8 @@ position = Vector2( -0.5, -38.5 )
 shape = SubResource( 1 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
+position = Vector2( 0.500003, -48.5 )
+scale = Vector2( 5.55, 4.65 )
 process_parent = true
 physics_process_parent = true
