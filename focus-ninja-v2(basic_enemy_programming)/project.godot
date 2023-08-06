@@ -22,7 +22,7 @@ _global_script_classes=[ {
 "base": "Actor",
 "class": "Player",
 "language": "GDScript",
-"path": "res://player_script.gd"
+"path": "res://src/actors/player_script.gd"
 } ]
 _global_script_class_icons={
 "Actor": "",

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://src/actors/Enemy_base.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/ShadesRedForTilemap.png" type="Texture" id=2]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/objects/Star.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/objects/Portal.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/levels/Menu.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -414,5 +415,6 @@ position = Vector2( 910, 345 )
 
 [node name="Portal2D" parent="." instance=ExtResource( 5 )]
 position = Vector2( 1565, 537 )
+next_scene = ExtResource( 6 )
 
 [editable path="Player"]
