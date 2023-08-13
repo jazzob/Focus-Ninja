@@ -95,7 +95,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 position = Vector2( 246, 237 )
 
 [node name="Camera2D" parent="Player" index="2"]
-limit_right = 3130
+limit_right = 3825
 limit_bottom = 775
 
 [node name="Enemy" parent="." instance=ExtResource( 1 )]

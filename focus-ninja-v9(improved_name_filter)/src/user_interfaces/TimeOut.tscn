@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://src/user_interfaces/TimeOut_script.gd" type="Script" id=1]
-[ext_resource path="res://src/user_interfaces/EndText_script.gd" type="Script" id=2]
+[ext_resource path="res://src/user_interfaces/TimeOutText_script.gd" type="Script" id=1]
+[ext_resource path="res://src/user_interfaces/TimeOut_script.gd" type="Script" id=2]
 [ext_resource path="res://assets/bw_scale.png" type="Texture" id=3]
 [ext_resource path="res://assets/Tektur-Bold.ttf" type="DynamicFontData" id=4]
 
@@ -133,7 +133,7 @@ font_data = ExtResource( 4 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 rect_pivot_offset = Vector2( -463, -1181 )
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="Button" type="Button" parent="."]
 anchor_left = 0.5
@@ -144,7 +144,7 @@ margin_left = -150.0
 margin_top = -200.0
 margin_right = 150.0
 margin_bottom = -130.0
-text = "Main Menu"
+text = "Exit"
 
 [node name="TileMap" type="TileMap" parent="."]
 z_index = -1
@@ -168,6 +168,6 @@ fh"
 tab_size = 10
 text = "
 fh"
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
