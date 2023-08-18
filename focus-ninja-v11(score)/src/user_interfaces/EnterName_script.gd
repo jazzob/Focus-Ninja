@@ -55,9 +55,13 @@ func legalNameChecker(input_string: String) -> bool:
 	else:
 		return false
 
+#when enter is pressed 
 func on_enter_pressed():
+	#if the legal checker is true then set the start time of the next level and set the player name
 	if legalNameChecker(text) == true:
 		Global.player_name = text
+		Global.level_start_time = OS.get_ticks_msec()
 		get_tree().change_scene("res://src/levels/Level1.tscn")
+	#else show the error message
 	else:
 		get_node("RichTextLabel").visible = true

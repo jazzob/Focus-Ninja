@@ -44,7 +44,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Focus-ninja-v 10"
+config/name="Focus-ninja-v 11"
 run/main_scene="res://src/user_interfaces/Menu.tscn"
 
 [autoload]

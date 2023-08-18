@@ -1,11 +1,18 @@
 extends Actor
 class_name Player
 
+
+
+
 func _ready() -> void:
 	#resets velocity to zero
 	velocity.x = 0
 	velocity.y = 0
-	
+	#resets the score functions
+	Global.enemies_killed = 0
+	Global.stars_collected = 0
+
+
 
 
 #creates movement
@@ -51,6 +58,8 @@ func _physics_process(delta: float) -> void:
 			velocity.y = -stomp_impulse
 			#calls kill func
 			(collider as Enemy).kill()
+			#increase the enemy kill count
+			Global.enemies_killed += 1
 
 #detects if the enemy enters the enemy detector area and kills player
 func _on_EnemyDetector_body_entered(body: Node) -> void:
@@ -59,10 +68,13 @@ func _on_EnemyDetector_body_entered(body: Node) -> void:
 		get_tree().change_scene(current_scene)
 
 
-#detects is spike enters the enemy detector area and kills player
+#function that runs when the player enters an area 2d
 func _on_EnemyDetector_area_entered(area: Area2D) -> void:
+	#if the area is a spike restart the scene
 	if area is Spike:
 		var current_scene = get_tree().get_current_scene().get_filename()
 		get_tree().change_scene(current_scene)
-
-
+		
+	#if the area is a star add one to 
+	if area is Star:
+		Global.stars_collected += 1

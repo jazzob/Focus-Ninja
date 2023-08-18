@@ -22,4 +22,9 @@ func teleport() -> void:
 #if the player enters the portal the teleport function will be played
 func _on_Portal2D_body_entered(body: PhysicsBody2D) -> void:
 	if body is Player:
+		#play the score function
+		Global.calc_score(Global.stars_collected, Global.enemies_killed, Global.level_start_time)
+		#reset the level start time
+		Global.level_start_time = OS.get_ticks_msec()
+		#change the level
 		teleport()
